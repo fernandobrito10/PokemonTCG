@@ -1,7 +1,7 @@
 ﻿using PokemonTCG.Modelos.Enums;
 
 namespace PokemonTCG.Modelos {
-    internal class Carta {
+    public class Carta {
         public Pokemon Pokemon { get; set; }
         public List<Golpe> Golpes { get; set; }
         public int Vida { get; set; }

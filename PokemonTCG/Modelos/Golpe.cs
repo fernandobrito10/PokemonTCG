@@ -2,7 +2,7 @@
 using PokemonTCG.Modelos.Enums;
 
 namespace PokemonTCG.Modelos; 
-internal class Golpe {
+public class Golpe {
     [Key]
     public int Id { get; set; }
     public string Nome { get; set; }

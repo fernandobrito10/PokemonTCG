@@ -2,19 +2,18 @@
 using PokemonTCG.Modelos.Enums;
 
 namespace PokemonTCG.Modelos; 
-internal class Pokemon {
+public class Pokemon {
     [Key]
     public int Id { get; set; }
-    public int Numero { get; set; }
-    public string Nome { get; set; }
+    public string Nome { get; set; } = string.Empty;
     public TipoEnum Tipo { get; set; }
-    public Pokemon(int numero, string nome, TipoEnum tipo) {
-        Numero = numero;
+    public Pokemon() { }
+    public Pokemon(string nome, TipoEnum tipo) {
         Nome = nome;
         Tipo = tipo;
     }
-    public void PrintInfo() {
-        Console.WriteLine($"Informações de {Nome}");
-        Console.WriteLine($"Nº {Numero}\nNome: {Nome}\nTipo: {Tipo}");
+    public override string ToString() {
+        return $"Informações de {Nome}" +
+            $"\nNome: {Nome}\nTipo: {Tipo}";
     }
 }
